@@ -9,11 +9,11 @@ title: Ful Stack API Reflection
 
 ## Introduction
 
-In this blog, we will review the design and implementation of a full-stack feature for managing user profiles. The project aligns with the Create performance task, focusing on solving problems, enabling innovation, and exploring personal interests.
+In this blog, we will review the design and implementation of a full-stack feature for managing user profiles. The program aligns with the Create performance task, focusing on solving problems, enabling innovation, and exploring personal interests.
 
 ## Purpose of the Program
 
-The purpose of our group's program is to provide a robust system for managing user profiles within a web application. This feature enables users to create, read, update, and delete their profiles, fostering a personalized and engaging user experience.
+The purpose of our my api is to provide a robust system for managing user profiles on our website. This feature enables users to create, read, update, and delete their profiles, creating a personalized and engaging user experience.
 
 ### Purpose of My Feature
 
