@@ -2,192 +2,156 @@
 toc: true
 comments: true
 layout: post
-title: Ful Stack API Reflection
+title: Ful Stack Reflection
 ---
+# User Profile Feature Review
 
-# Collaborating on a Full Stack User Profile Feature
+## Purpose of the Group's Program
+Our group's project is a social media platform designed to foster community engagement and holiday gifts shared among each other. It integrates both frontend and backend components, ensuring seamless user interactions through a well-structured API and an intuitive UI.
 
-## Introduction
+## Purpose of My Individual Feature
+The feature I developed is the user profile management system, which allows users to view, update, and delete their profiles. This includes handling profile pictures, usernames, and theme preferences while ensuring secure API communication between the frontend and backend.
 
-In this blog, we will review the design and implementation of a full-stack feature for managing user profiles. The program aligns with the Create performance task, focusing on solving problems, enabling innovation, and exploring personal interests.
+## Input/Output Requests
+### Frontend API Request and Response Demonstration
+- **Input**: Fetching user profile details using JavaScript `fetch` API.
+- **Output**: JSON response containing user profile data.
 
-## Purpose of the Program
+```javascript
+const userId = localStorage.getItem("user_id");
+const apiUrl = `http://127.0.0.1:8887/user/${userId}/profile`;
 
-The purpose of our my api is to provide a robust system for managing user profiles on our website. This feature enables users to create, read, update, and delete their profiles, creating a personalized and engaging user experience.
-
-### Purpose of My Feature
-
-My contribution focuses on implementing the backend API for user profile management and connecting it to a dynamic frontend. This includes creating CRUD operations in the API, ensuring secure data handling, and building an interactive user interface for seamless interactions.
-
----
-
-## Input/Output Demonstrations
-
-### Using the Frontend
-
-The frontend connects to the backend API to fetch, display, and manage user profiles dynamically. Below is a demonstration:
-
-```html
-<script>
-    const apiUrl = 'http://127.0.0.1:8887/api/user_profile';
-
-    async function loadProfile() {
-        try {
-            const response = await fetch(`${apiUrl}`);
-            const data = await response.json();
-
-            document.getElementById('link').src = data.profilePicture || '/images/logo.png';
-            document.getElementById('name').textContent = data.username || 'Unknown User';
-            document.getElementById('theme').textContent = `Preferred Theme: ${data.theme || 'Light'}`;
-        } catch (error) {
-            console.error('Error fetching profile data:', error);
-        }
+async function loadProfile() {
+    try {
+        const response = await fetch(apiUrl);
+        const data = await response.json();
+        document.getElementById('link').src = data.link || 'default_image.png';
+        document.getElementById('username').textContent = data.name || 'Unknown User';
+        document.getElementById('theme-preference').textContent = `Preferred Theme: ${data.theme || 'Light'}`;
+    } catch (error) {
+        console.error('Error fetching profile data:', error);
     }
-
-    document.addEventListener('DOMContentLoaded', loadProfile);
-</script>
-```
-
-### Using Postman
-
-#### Raw API Request and Response
-
-**POST Request**:
-```json
-{
-    "user_id": 1,
-    "link": "/images/custom_profile.png",
-    "name": "John Doe",
-    "theme": "dark"
-}
-```
-**Response**:
-```json
-{
-    "profile_id": 10,
-    "user_id": 1,
-    "link": "/images/custom_profile.png",
-    "name": "John Doe",
-    "theme": "dark"
 }
 ```
 
-### Database Management
+### API Response Example
+```json
+{
+    "user_id": 1,
+    "link": "http://127.0.0.1:8887/socialmedia_frontend/images/profile.png",
+    "name": "Spencer Lyons",
+    "theme": "Dark"
+}
+```
 
-Using `db_init`, `db_restore`, and `db_backup`, we can create, restore, and backup database data. Example:
+### Postman API Request & RESTful Response
+**GET Request:** `http://127.0.0.1:8887/api/user_profile?user_id=1`
+**Response:**
+```json
+{
+    "user_id": 1,
+    "link": "/images/profile.png",
+    "name": "Spencer Lyons",
+    "theme": "Dark"
+}
+```
 
+## Database Queries & Data Manipulation
+### Extracting Data from Database
 ```python
-# Initializing sample data
-initUserProfile()
+profile = UserProfile.query.filter_by(user_id=user_id).first()
 ```
+- This query retrieves a specific user's profile from the database.
 
----
-
-## Working with Lists, Dictionaries, and Databases
-
-### Lists and Dictionaries
-
-In the API, database queries return lists of rows, where each row is represented as a dictionary:
-
+### Working with Lists & Dictionaries
+- **List:** Fetching all users from the database.
 ```python
 profiles = UserProfile.query.all()
+```
+- **Dictionary:** Formatting response data.
+```python
 return jsonify([profile.read() for profile in profiles])
 ```
 
-### Formatting API Response Data
-
-The `read()` method in the `UserProfile` model formats database rows into JSON:
-
+## Class Methods for CRUD Operations
+### Create
 ```python
-return {
-    "profile_id": self.profile_id,
-    "user_id": self.user_id,
-    "link": self.link,
-    "name": self.name,
-    "theme": self.theme
+def post(self):
+    data = request.get_json()
+    profile = UserProfile(
+        user_id=data['user_id'],
+        link=data.get('link', 'default_link'),
+        name=data.get('name', 'Unknown User'),
+        theme=data.get('theme', 'light')
+    )
+    profile.create()
+    return jsonify(profile.read())
+```
+
+### Read
+```python
+def get(self):
+    user_id = request.args.get('user_id')
+    profile = UserProfile.query.filter_by(user_id=user_id).first()
+    return jsonify(profile.read())
+```
+
+### Update
+```python
+def put(self):
+    data = request.get_json()
+    profile = UserProfile.query.filter_by(user_id=data['user_id']).first()
+    profile.update(data)
+    return jsonify(profile.read())
+```
+
+### Delete
+```python
+def delete(self):
+    data = request.get_json()
+    profile = UserProfile.query.filter_by(user_id=data['user_id']).first()
+    profile.delete()
+    return {"message": "User profile deleted successfully"}
+```
+
+## API Calls & Responses
+### Fetch API Call (Frontend to Backend)
+```javascript
+async function deleteProfile() {
+    const confirmation = confirm('Are you sure you want to delete this profile?');
+    if (!confirmation) return;
+    try {
+        const response = await fetch(`${apiUrl}`, {
+            method: 'DELETE',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({ user_id: userId })
+        });
+        if (response.ok) {
+            alert('Profile deleted successfully!');
+        } else {
+            const errorData = await response.json();
+            alert(`Error: ${errorData.message}`);
+        }
+    } catch (error) {
+        console.error('Error deleting profile:', error);
+    }
 }
 ```
 
-### Database Queries
-
-Queries like `filter_by` extract rows:
-
-```python
-profile = UserProfile.query.filter_by(user_id=data['user_id']).first()
-```
-These queries are powered by SQLAlchemy, a third-party ORM library.
-
----
-
-## Algorithmic Code
-
-### API Class
-
-The `UserProfileAPI._CRUD` class handles GET, POST, PUT, and DELETE methods:
-
-```python
-class _CRUD(Resource):
-    @token_required()
-    def post(self):
-        data = request.get_json()
-        profile = UserProfile(
-            user_id=data['user_id'],
-            link=data.get('link', '/images/logo.png'),
-            name=data.get('name', 'toby'),
-            theme=data.get('theme', 'light')
-        )
-        profile.create()
-        return jsonify(profile.read())
+## Handling Different Responses
+### Normal Case
+- **Input:** Valid user ID
+- **Response:** Profile deleted successfully
+```json
+{"message": "User profile deleted successfully"}
 ```
 
-### Method with Sequencing, Selection, and Iteration
-
-The `update` method in the `UserProfile` class combines these elements:
-
-```python
-def update(self, data):
-    self.link = data.get('link', self.link)
-    self.name = data.get('name', self.name)
-    self.theme = data.get('theme', self.theme)
-    try:
-        db.session.commit()
-    except IntegrityError as e:
-        db.session.rollback()
-        logging.warning(f"Error updating profile for user '{self.user_id}': {str(e)}")
+### Error Case
+- **Input:** Non-existent user ID
+- **Response:** Profile not found
+```json
+{"message": "User profile not found"}
 ```
-
----
-
-## Calling Algorithms
-
-### Fetching Data from the API
-
-The frontend uses `fetch` to call the API:
-
-```javascript
-const response = await fetch(`${apiUrl}`);
-const data = await response.json();
-```
-
-### Handling Responses
-
-Response data is processed dynamically in the DOM:
-
-```javascript
-document.getElementById('name').textContent = data.username || 'Unknown User';
-```
-
-### Error Handling and Different Conditions
-
-Errors are logged and displayed:
-
-```python
-if not profile:
-    return {"message": "User profile not found"}, 404
-```
-
----
 
 ## Conclusion
-
-This full-stack user profile feature demonstrates the power of collaboration and innovation in programming. From API development to frontend integration, each component plays a vital role in delivering a seamless user experience. Feedback is welcome as we continue to refine and enhance this feature.
+This review highlights the frontend-backend integration for user profile management, including API requests, database interactions, and error handling. It demonstrates the collaborative and structured approach in software development, addressing CRUD operations and optimizing user experience through API-driven solutions.
