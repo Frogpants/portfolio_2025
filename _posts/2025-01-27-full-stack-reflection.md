@@ -2,9 +2,9 @@
 toc: true
 comments: true
 layout: post
-title: Ful Stack Reflection
+title: Full Stack Reflection
 ---
-# User Profile Feature Review
+# User Profile Feature Blog
 
 ## Purpose of the Group's Program
 Our group's project is a social media platform designed to foster community engagement and holiday gifts shared among each other. It integrates both frontend and backend components, ensuring seamless user interactions through a well-structured API and an intuitive UI.
@@ -81,7 +81,7 @@ def post(self):
     profile = UserProfile(
         user_id=data['user_id'],
         link=data.get('link', 'default_link'),
-        name=data.get('name', 'Unknown User'),
+        name=data.get('name', 'Default User'),
         theme=data.get('theme', 'light')
     )
     profile.create()
