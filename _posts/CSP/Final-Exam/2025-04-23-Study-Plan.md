@@ -77,3 +77,18 @@ categories: ['Python']
 
 ---
 
+## Lessons to Review
+
+- [Benefits of Computing](https://sanpranav.github.io/QcommVNE_Frontend/Benefical)  
+- [Digital Divide](https://sanpranav.github.io/QcommVNE_Frontend/DigitalD)  
+- [Computing Bias](https://shawnray09.github.io/computerbias/2025/03/18/computing-bias.html)  
+- [Crowdsourcing](https://vibha1019.github.io/team_teach_tri3/crowdsourcing-lesson)  
+- [Legal and Ethical Computing](https://thepencilsharpener.github.io/Biotech-SKANZ-Frontend/legalandethical/)  
+- [Safe Computing](https://thepencilsharpener.github.io/Biotech-SKANZ-Frontend/safecomputing/)  
+
+- [Binary Search](https://hypernova101.github.io/MihirCSP/2025/03/19/binarysearch.html)  
+- [List Filtering](https://sanpranav.github.io/QcommVNE_Frontend/ListsFilter)  
+- [Simulations](https://vibha1019.github.io/team_teach_tri3/simulationteamteach)  
+- [Big O & Efficiency](https://sanpranav.github.io/QcommVNE_Frontend/BigO)  
+- [Undecidable & Heuristic Problems](https://sanpranav.github.io/QcommVNE_Frontend/UndH)  
+- [Binary Number System](https://sanpranav.github.io/QcommVNE_Frontend/Binary) 
