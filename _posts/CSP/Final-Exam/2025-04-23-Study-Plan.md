@@ -37,12 +37,11 @@ categories: ['Python']
   - Ethical, social, and global impacts of innovations.
   - Writing practice for open-ended prompts.
 - **Practice Exam**:
-  - Full-length AP CSP practice test (timed).
-  - Review missed questions and categorize topics for improvement.
+  - Review Past Practice Exams
+  - Review missed questions and review lowest Big Ideas scoring.
 - **Practice**:
-  - ~40 MCQs including a simulated test.
-  - 1–2 open-ended written responses.
-  - 1 reflection on your practice performance.
+  - Practice free response coding
+  - 1 reflection on my practice performance.
 
 ---
 
@@ -54,11 +53,10 @@ categories: ['Python']
   - Practice manipulating lists and nested data.
   - Code reading and logic tracing exercises.
 - **CPT/Project Focus**:
-  - Revisit your Create Performance Task.
-  - Reflect on your use of abstraction and algorithms.
+  - Revisit my Create Performance Task.
+  - Reflect on my use of abstraction and algorithms.
 - **Ethical Refresher**: One more written response on computing innovations and their impact.
 - **Practice**:
-  - 30–40 MCQs, mostly targeted by weakness.
   - 2 code reading/tracing exercises.
   - 1 project blog review or summary.
 
@@ -67,7 +65,7 @@ categories: ['Python']
 ## Week 4: May 12 – May 15  
 **Final Review & Exam Readiness**
 
-- **Flashcard + Vocab Review**: Quiz yourself on terms across all topics.
+- **Flashcard + Vocab Review**: Quiz myself on terms across all topics.
 - **Code Review**: Practice reading and analyzing snippets and pseudocode.
 - **Mini Exam**:
   - 20-question MCQ + 1 written response.
@@ -76,8 +74,7 @@ categories: ['Python']
   - Light summary review, cheat sheets, and final notes.
   - Get materials ready and rest well before exam day.
 - **Practice**:
-  - ~30 MCQs, 1 timed open-ended prompt.
-  - Self-check your confidence and understanding.
+  - Self-check my confidence and understanding.
 
 ---
 
