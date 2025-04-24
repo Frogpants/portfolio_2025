@@ -39,7 +39,7 @@ categories: ['Python']
   - **Unit 4: Data**
     - 4.1: Representing Data
     - 4.3: Using Programs with Data
-  - **Unit 3 Continued**:
+  - **Unit 3: Algorithms and Programming**:
     - 3.12: Calling Procedures
     - 3.13: Developing Procedures
     - 3.14: Libraries
