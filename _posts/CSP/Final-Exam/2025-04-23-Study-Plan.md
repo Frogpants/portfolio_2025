@@ -16,64 +16,76 @@ categories: ['Python']
 ## Week 1: April 23 – April 27  
 **Focus: Programming Fundamentals & Loop Logic**
 
-- **Learn & Practice**:
-  - Review variables, conditionals, and functions.
-  - Dive deep into loops: `for`, `while`, nested loops, and loop tracing.
-  - Practice writing loop-based problems: sums, filters, patterns.
-- **Code Activities**:
-  - Create a function that loops through lists of user profiles and filters based on themes.
-  - Modify a loop to process JSON response data like in your PPR API.
-- **Reflection**:
-  - Write a short summary of how loops were used in your profile management feature (e.g., reading lists of users).
-  - Identify ways you could improve efficiency or code clarity.
+- **Study on AP Classroom**:
+  - **Unit 3: Algorithms and Programming**
+    - 3.6: Conditionals
+    - 3.7: Nested Conditionals
+    - 3.8: Iteration (Loops)
+    - 3.9: Developing Algorithms using Strings
+    - 3.10: Developing Algorithms using Lists
+- **Practice**:
+  - Trace and debug loops and nested conditionals.
+  - Solve basic problems involving list filtering and aggregating values with loops.
+- **Project Reflection**:
+  - Identify where loop logic helped in displaying or processing multiple profiles.
+  - How would loop optimization improve your feature?
 
 ---
 
 ## Week 2: April 28 – May 4  
-**Focus: API Practice, Lists, & Abstraction**
+**Focus: Abstraction, Lists, and APIs**
 
-- **Learn & Practice**:
-  - Understand data abstraction through lists and dictionaries.
-  - Practice writing CRUD operations using simulated APIs or mock data.
-  - Review your PPR’s use of `query.all()` and `read()` methods.
-- **Code Activities**:
-  - Build a mock API that stores and returns user data.
-  - Create a program that reads a list of user objects and updates specific fields.
-- **Reflection**:
-  - How did abstraction help simplify your project?
-  - Discuss how you used dictionaries to represent structured data like profile info.
+- **Study on AP Classroom**:
+  - **Unit 4: Data**
+    - 4.1: Representing Data
+    - 4.3: Using Programs with Data
+  - **Unit 3 Continued**:
+    - 3.12: Calling Procedures
+    - 3.13: Developing Procedures
+    - 3.14: Libraries
+- **Practice**:
+  - Build programs that create and use dictionaries to represent user data.
+  - Practice CRUD logic by building functions that simulate data handling like your project.
+- **Project Reflection**:
+  - How did using lists and dictionaries help you simplify code?
+  - What procedure in your code could be turned into a library function?
 
 ---
 
 ## Week 3: May 5 – May 11  
-**Focus: Cybersecurity & Internet Systems**
+**Focus: Cybersecurity, the Internet & Data Safety**
 
-- **Learn & Practice**:
-  - Study key protocols: HTTP, DNS, TCP/IP.
-  - Learn how APIs work securely over the internet.
-  - Review encryption basics (symmetric vs. asymmetric), SSL, and how security threats (e.g., phishing, spoofing) occur.
-- **Code/Activity Ideas**:
-  - Trace the flow of a user’s login through your backend, showing where data is vulnerable.
-  - Diagram how your project handles secure communication.
-- **Reflection**:
-  - Write about one way your project protects user data.
-  - Identify one potential vulnerability and how you might improve it.
+- **Study on AP Classroom**:
+  - **Unit 5: Computer Systems and Networks**
+    - 5.1: The Internet
+    - 5.2: Fault Tolerance
+    - 5.3: Parallel and Distributed Computing
+  - **Unit 6: Cybersecurity**
+    - 6.1: Cybersecurity Basics
+    - 6.2: Encryption
+    - 6.3: Safe Computing
+- **Practice**:
+  - Map out a typical API request in your project and identify vulnerable areas.
+  - Simulate hashing and explain symmetric/asymmetric encryption with examples.
+- **Project Reflection**:
+  - How does your project demonstrate safe communication?
+  - Reflect on secure data handling and areas for improvement.
 
 ---
 
 ## Week 4: May 12 – May 15  
-**Focus: Final Integration & Performance Task Reflection**
+**Focus: Final Review & Create Performance Task Reflection**
 
-- **Review**:
-  - Practice revising key lessons: loops, data abstraction, cybersecurity, API usage.
-  - Read sample responses for Create PT write-ups and compare with your own.
-- **Activities**:
-  - Write a final blog-style reflection explaining how each element of the CSP curriculum is present in your user profile feature.
-  - Update or expand your PPR with visuals, API flowcharts, or real screenshots.
-- **Reflection**:
-  - What part of the project are you most proud of?
-  - What technical challenge taught you the most?
-  - What would you do differently with more time?
+- **Study on AP Classroom**:
+  - **Create PT Skill Review**:
+    - Practice describing program purpose, data abstraction, and algorithm logic.
+    - Review scoring guidelines and sample student responses.
+- **Practice**:
+  - Polish your PPR by explaining abstraction, procedure use, and algorithm steps clearly.
+  - Compare your work with 3 scored Create PT examples from College Board.
+- **Project Reflection**:
+  - What computational ideas from the course helped most in your work?
+  - How did you ensure correctness and usability in your profile system?
 
 ---
 
@@ -91,4 +103,4 @@ categories: ['Python']
 - [Simulations](https://vibha1019.github.io/team_teach_tri3/simulationteamteach)  
 - [Big O & Efficiency](https://sanpranav.github.io/QcommVNE_Frontend/BigO)  
 - [Undecidable & Heuristic Problems](https://sanpranav.github.io/QcommVNE_Frontend/UndH)  
-- [Binary Number System](https://sanpranav.github.io/QcommVNE_Frontend/Binary) 
+- [Binary Number System](https://sanpranav.github.io/QcommVNE_Frontend/Binary)  
