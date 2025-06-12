@@ -107,7 +107,23 @@ To support this goal:
 
 Designing educational tools made me think deeply about **how people learn**, and what makes a concept truly “click.” I learned to think from the user’s perspective and guide them through confusion toward understanding.
 
-<!-- add image -->
+Here’s an updated version of your blog post with a **Skills Learned** table added to the most appropriate section: **Final Thoughts**. The table summarizes and highlights key takeaways from the project.
+
+---
+
+## Skills I Gained
+
+Throughout the development of Bitshift 0101, I gained both technical and design-focused skills. Here’s a breakdown of what I learned across different areas:
+
+| Category                  | Skills Learned                                                                |
+| ------------------------- | ----------------------------------------------------------------------------- |
+| **Computer Science**      | Bitwise operations, binary arithmetic, logic gate simulation, event systems   |
+| **Frontend Development**  | Canvas API, JavaScript animations, dynamic UI rendering, custom frameworks    |
+| **Software Architecture** | Dependency graphs, modular system design, data flow management                |
+| **Visual Design**         | Grid-based layouts, color theory for clarity, interactive feedback animations |
+| **Education & UX**        | Instructional design, progressive tutorials, challenge-based learning         |
+| **Debugging & Testing**   | Logic validation, interactive testing, user-driven QA                         |
+| **Creative Development**  | Turning abstract systems into visual, playful learning environments           |
 
 ---
 
