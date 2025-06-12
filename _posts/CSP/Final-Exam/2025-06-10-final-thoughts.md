@@ -103,7 +103,7 @@ To support this goal:
 
 - I wrote clear documentation for how each component worked, including internal logic and visual behavior.
 - I added **step-by-step tutorials** and interactive hints that walk users through performing basic binary tasks.
-- I created a set of **puzzle challenges** that gradually increase in complexity—from toggling single bits to combining multiple gates into small programs.
+- I created a set of **challenges** that gradually increase in complexity—from toggling single bits to combining multiple gates into small programs.
 
 Designing educational tools made me think deeply about **how people learn**, and what makes a concept truly “click.” I learned to think from the user’s perspective and guide them through confusion toward understanding.
 
