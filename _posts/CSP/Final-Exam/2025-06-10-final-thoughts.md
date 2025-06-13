@@ -2,7 +2,7 @@
 toc: true
 comments: true
 layout: post
-title: Final Thougts
+title: Final Thoughts
 author: Spencer Lyons
 nav: nav/home.html
 comments: false
