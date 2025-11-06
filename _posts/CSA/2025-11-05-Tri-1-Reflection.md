@@ -1,14 +1,9 @@
 ---
-toc: true
-comments: true
 layout: post
 title: N@tM Reflection
 ---
 
 ## Review & Reflection — Submodule 6: Component Integration
-
-**Date:** October 21, 2025  
-**Author:** Creators Team  
 
 ### Overview
 
